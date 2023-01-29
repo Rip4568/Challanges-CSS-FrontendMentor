@@ -1,0 +1,180 @@
+@import url('https://fonts.google.com/specimen/Overpass');
+
+* {
+  font-weight: 400, 700;
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+  --mobile-height: 768px;
+  --desktop-height: 1080px;
+
+  --primary-color-orange: hsl(25, 97%, 53%);
+
+  --neutral-color-white: hsl(0, 0%, 100%);
+  --neutral-color-light-grey: hsl(217, 12%, 63%);
+  --neutral-color-medium-grey: hsl(216, 12%, 54%);
+  --neutral-color-dark-blue: hsl(213, 19%, 18%);
+  --neutral-color-very-dark-blue: hsl(216, 12%, 8%);
+
+  --circle-background-color: grey;
+  --circle-background-color-hover: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--neutral-color-very-dark-blue);
+}
+
+h2 {
+  color: var(--neutral-color-white);
+}
+
+p {
+  font-size: 15px;
+  color: var(--neutral-color-medium-grey);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--neutral-color-dark-blue);
+  width: 310px;
+  /* height: calc(var(--desktop-width) / var(--mobile-width) * var(--mobile-width)); */
+  height: 300;
+  padding: 20px;
+  margin: 5px;
+
+  border-radius: 20px;
+}
+
+
+main .card-before-submit .star-icon {
+  background-color: rgb(59, 59, 59);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-before-submit .title {
+  margin: 1rem 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.rating .rate {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* com bordas ele fica bonitinho */
+  border: none;
+  /* background-color: var(--neutral-color-dark-blue); */
+}
+
+.rate:hover {
+  background-color: var(--primary-color-orange);
+}
+
+.rate:focus {
+  background-color: var(--primary-color-orange);
+  outline: 3px rgb(241, 207, 195) solid;
+}
+
+.rate:focus p,
+.rate:hover>p {
+  color: white;
+}
+
+.submit {
+  background-color: var(--primary-color-orange);
+  color: var(--neutral-color-white);
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*? Estilização do Botão submit, primeiro card  */
+.submit:hover {
+  transform: scale(1.1);
+  /* outline: auto; */
+}
+
+.submit:focus {
+  outline: 2px solid rgb(241, 207, 195);
+}
+
+/*! ESTILIZAÇÃO DO SEGUNDO CARD */
+
+
+.card-after-submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.card-after-submit .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* TODO: ajustar a imagem */
+  padding: 1rem 0;
+}
+
+.card-after-submit .selected-rate {
+  width: 200px;
+  display: flex;
+  margin-bottom: 1.5rem;
+  background-color: rgba(241, 224, 192, 0.089);
+  border-radius: 20px;
+  height: 30px !important;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color-orange);
+}
+
+.card-after-submit .greetings .title h2 {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- metaport for portable devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- css loader -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- title of the page -->
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card card-rating">
+        <div class="card-before-submit">
+          <div class="star-icon">
+            <img src="./images/icon-star.svg" alt="" />
+          </div>
+          <div class="card-title">
+            <h2 class="title">How did we do?</h2>
+          </div>
+          <div class="info">
+            <p class="info-paragraph">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
+          </div>
+          <div class="rating">
+            <!-- saber qual butão o usuario clicou-->
+            <button class="rate"><p>1</p></button>
+            <button class="rate"><p>2</p></button>
+            <button class="rate"><p>3</p></button>
+            <button class="rate"><p>4</p></button>
+            <button class="rate"><p>5</p></button>
+          </div>
+          <button class="submit" type="button" onclick="submit()">SUBMIT</button>
+        </div>
+      </div>
+
+      <div class="card card-thanks hidden">
+        <div class="card-after-submit">
+          <div class="image">
+            <img src="./images/illustration-thank-you.svg" alt="" srcset="" />
+          </div>
+          <div class="selected-rate">You Selected x Out of 5</div>
+          <div class="greetings">
+            <div class="title">
+              <h2>Thank You</h2>
+            </div>
+            <div class="info-greetings">
+              <p class="info-paragraph">
+                We appreciate you taking the time to give a rating. If you ever
+                need more support, don’t hesitate to get in touch!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution" style="color: rgb(96, 96, 247)">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jonathas David S. do N.</a>.
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

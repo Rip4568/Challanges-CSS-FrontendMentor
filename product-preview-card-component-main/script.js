@@ -1,0 +1,1 @@
+const testar = () => { alert('chamado com sucesso') }
