@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  /* Breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+
+  --cor-primaria: hsl(215, 51%, 70%);
+  --cor-secundaria: hsl(178, 100%, 50%);
+
+
+
+  /* - Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  background-color: var(--very-dark-blue-main);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--cor-primaria);
+}
+
+hr {
+  color: var(--very-dark-blue-main);
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  width: 300px;
+  height: 38rem;
+  background-color: var(--very-dark-blue-card);
+}
+
+.card .card-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-header .icon-view {
+  display: none;
+}
+
+.card .card-header:hover .icon-view {
+  display: block;
+  cursor: pointer;
+}
+
+.card .card-header .image-nft {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.card .card-header .image-nft:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.card .card-header .icon-view {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.card .card-body .value-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-body .title:hover {
+  cursor: pointer;
+  color: var(--cor-secundaria);
+  transition: 0.3s;
+}
+
+.card .card-body .value-and-time .value {
+  color: var(--cor-secundaria);
+}
+
+.card .card-footer .person-information {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+}
+
+.card .card-footer .person-information img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  margin-right: 20px;
+}
+
+.card .card-footer .person-information .person-name {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.card .card-footer .person-information .person-name:hover {
+  cursor: pointer;
+  color: var(--cor-secundaria);
+}
