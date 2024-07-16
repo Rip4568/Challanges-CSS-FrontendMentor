@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 @import url(reset.css);
 
 :root {
@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: "Hanken Grotesk", sans-serif;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 h2 {
@@ -59,7 +59,11 @@ h2 {
   width: 17rem;
   height: 25rem;
   border-radius: 20px;
-  background: linear-gradient(180deg, var(--light-slate-blue) 1%, var(--light-royal-blue) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--light-slate-blue) 1%,
+    var(--light-royal-blue) 100%
+  );
   color: var(--white);
 }
 
@@ -69,21 +73,13 @@ h2 {
   padding-bottom: 20px;
 }
 
-
 .result-score-circle {
   border-radius: 50%;
-  background: linear-gradient(180deg,
-      var(--light-royal-blue) 0%,
-      var(--light-slate-blue) 100%);
-  /* background-image: linear-gradient(180deg, var(--light-royal-blue) 10%, var(--light-slate-blue) 100%); */
-  /* background: linear-gradient(180deg,
-      var(--light-slate-blue) 0%,
-      var(--light-royal-blue) 0%,
-      var(--violet-blue) 100%,
-    ); */
-  /* --light-royal-blue
---violet-blue:
---dark-gray-blue */
+  background: linear-gradient(
+    180deg,
+    var(--light-royal-blue) 0%,
+    var(--light-slate-blue) 100%
+  );
   width: 8rem;
   height: 8rem;
   text-align: center;
@@ -105,7 +101,6 @@ h2 {
 
 .result-text-score p {
   margin: 0 20px 0 20px;
-  font-size: medium;
 }
 
 .result-text-score {
@@ -114,4 +109,123 @@ h2 {
 
 .result-text-score h2 {
   font-size: 1.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: start;
+  padding: 10px;
+}
+
+.card-summary {
+  padding: 0 1rem 0 1rem;
+  width: 12rem;
+  position: static;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.result-points span::after {
+  content: " / 100";
+  color: gray;
+}
+/* .result:nth-child(1) p {
+  color: var(--light-red);
+}
+
+.result:nth-child(1) {
+  background-color: hsl(0, 100%, 67%, 0.151);
+} */
+
+.result:nth-child(1) {
+  p {
+    color: var(--light-red);
+  }
+  background-color: hsl(0, 100%, 67%, 0.151);
+}
+
+.result:nth-child(2) {
+  p {
+    color: var(--orangey-yellow);
+  }
+  background-color: hsl(39, 100%, 56%, 0.151);
+}
+
+.result:nth-child(3) {
+  p {
+    color: var(--green-teal);
+  }
+  background-color: hsla(166, 100%, 37%, 0.151);
+}
+
+.result:nth-child(4) {
+  p {
+    color: var(--light-royal-blue);
+  }
+  background-color: hsla(241, 81%, 54%, 0.151);
+}
+
+.result-points {
+  color: black;
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: linear-gradient(
+    180deg,
+    var(--light-slate-blue) 1%,
+    var(--light-royal-blue) 99%
+  );
+}
+
+.button:active,
+.button:focus {
+  border: 3px solid blueviolet;
+}
+
+@media (max-width: 430px) {
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .card-result {
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .card-summary {
+    width: 90%;
+  }
+
+  .result {
+    padding: 20px;
+  }
+
+  .button {
+    padding: 30px 10px;
+    margin-top: 10px;
+    border-radius: 30px;
+  }
 }
