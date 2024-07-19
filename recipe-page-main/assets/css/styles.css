@@ -1,0 +1,115 @@
+/* configurações de cores e tamanhos inicias  */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  --mobile: 375px;
+  --desktop: 1440px;
+  --font-young-serif: "Young Serif", serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-young-serif);
+  font-weight: 400;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+body {
+  background-color: wheat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-young-serif);
+  font-weight: 400;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+ul,
+ol {
+  list-style: inherit red;
+}
+
+/* ====== #estilizações  */
+.card-wrapper {
+  background-color: white;
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 20px;
+}
+
+.card-image {
+  width: 100%;
+  text-align: center;
+}
+
+.card-image img {
+  width: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 10px 30px;
+}
+
+.card-content > div {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.preparation-time {
+  padding: 10px;
+  background-color: rgba(165, 42, 42, 0.11);
+}
+
+.preparation-time ul {
+  margin-left: 30px;
+}
+
+.preparation-time h3 {
+  font-family: var(--font-outfit);
+  color: var(--rose-800);
+}
+
+.preparation-time span {
+  font-weight: 600;
+}
+
+h2 {
+  font: var(--font-young-serif);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--rose-800);
+}
+
+.ingredients ul {
+  margin-left: 30px;
+}
+
+ol > li,
+ul > li {
+  margin-bottom: 5px;
+}
